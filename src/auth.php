@@ -3,7 +3,6 @@
 require_once __DIR__ . '/db.php';
 require_once __DIR__ . '/flash.php';
 
-//session_start();
 if (session_status() === PHP_SESSION_NONE) { session_start(); }
 
 function auth_current_user(): ?array {
