@@ -1,8 +1,8 @@
 <?php
-// public/users.php - Solo admin
-require_once __DIR__ . '/../src/auth.php';
-require_once __DIR__ . '/../src/flash.php';
-require_once __DIR__ . '/../src/db.php';
+// users.php - Solo admin
+require_once __DIR__ . '/src/auth.php';
+require_once __DIR__ . '/src/flash.php';
+require_once __DIR__ . '/src/db.php';
 
 auth_require_admin();
 $flashes = flash_get_all();
@@ -15,7 +15,7 @@ $users = $stmt->fetchAll();
 <head>
   <meta charset="utf-8">
   <title>Usuarios - SportShop</title>
-  <link rel="stylesheet" href="/assets/styles.css">
+  <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
 <header>

@@ -1,0 +1,24 @@
+# Establecer index.php como página principal
+DirectoryIndex index.php
+
+# Desactivar listado de directorios
+Options -Indexes
+
+# Asegurar compatibilidad con PHP y rutas básicas
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Permitir acceso directo a archivos existentes
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+
+  # Redirigir todo lo demás a index.php
+  RewriteRule ^(.*)$ index.php [L]
+</IfModule>
+
+# Evitar acceso directo a archivos sensibles
+<FilesMatch "\.(env|sql|md|gitignore|git|htaccess)$">
+  Order allow,deny
+  Deny from all
+</FilesMatch>

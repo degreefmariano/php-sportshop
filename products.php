@@ -1,9 +1,9 @@
 <?php
-// public/products.php (CRUD básico) - Solo admin
-require_once __DIR__ . '/../src/auth.php';
-require_once __DIR__ . '/../src/csrf.php';
-require_once __DIR__ . '/../src/flash.php';
-require_once __DIR__ . '/../src/db.php';
+// products.php (CRUD básico) - Solo admin
+require_once __DIR__ . '/src/auth.php';
+require_once __DIR__ . '/src/csrf.php';
+require_once __DIR__ . '/src/flash.php';
+require_once __DIR__ . '/src/db.php';
 
 auth_require_admin();
 
@@ -65,7 +65,7 @@ if ($action === 'delete' && $_SERVER['REQUEST_METHOD'] === 'POST') {
 $flashes = flash_get_all();
 
 function view_header($title='Productos') {
-    echo '<!doctype html><html lang="es"><head><meta charset="utf-8"><title>'.htmlspecialchars($title).'</title><link rel="stylesheet" href="/assets/styles.css"></head><body>';
+    echo '<!doctype html><html lang="es"><head><meta charset="utf-8"><title>'.htmlspecialchars($title).'</title><link rel="stylesheet" href="assets/styles.css"></head><body>';
     echo '<header><div>SportShop</div><nav><a href="/">Inicio</a> <a href="/products.php">Productos</a> <a href="/users.php">Usuarios</a> <a href="/logout.php">Salir</a></nav></header><div class="container">';
 }
 

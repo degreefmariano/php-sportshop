@@ -1,0 +1,9 @@
+# Produccion environment variables (infinityfree)
+DB_HOST=sql207.infinityfree.com
+DB_PORT=3306
+DB_NAME=if0_40302675_schema
+DB_USER=if0_40302675
+DB_PASS=7nw681rm
+APP_ENV=production
+APP_DEBUG=0
+

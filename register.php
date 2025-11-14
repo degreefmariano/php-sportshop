@@ -1,8 +1,8 @@
 <?php
-// public/register.php
-require_once __DIR__ . '/../src/auth.php';
-require_once __DIR__ . '/../src/csrf.php';
-require_once __DIR__ . '/../src/flash.php';
+// register.php
+require_once __DIR__ . '/src/auth.php';
+require_once __DIR__ . '/src/csrf.php';
+require_once __DIR__ . '/src/flash.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!csrf_validate()) { http_response_code(400); die('CSRF token inválido'); }
@@ -28,7 +28,7 @@ $flashes = flash_get_all();
 <head>
   <meta charset="utf-8">
   <title>Registro - SportShop</title>
-  <link rel="stylesheet" href="/assets/styles.css">
+  <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
 <header>
